@@ -1,5 +1,5 @@
-const video = document.querySelector("#myVideo");
-const btn = document.querySelector("#myBtn");
+const video = document.getElementById("#myVideo");
+const btn = document.getElementById("#myBtn");
 
 function myFunction() {
     if (video.paused) {
@@ -11,3 +11,11 @@ function myFunction() {
     }
 }
 
+
+function self(){
+    window.location.href = 'https://www.naver.com';
+}
+
+function newwindow(){
+    window.open('https://www.naver.com');
+}
