@@ -36,7 +36,6 @@ body {
   );
   position: relative;
   z-index: 1;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
 }
 
 .face {
@@ -126,7 +125,7 @@ body {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: RGB(249, 236, 220);
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 0px 0.5px;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 0px 0.2px;
   z-index: 1;
 }
 
@@ -151,6 +150,10 @@ body {
 }
 .leg:nth-child(5) {
   animation: legs 2s 0.5s infinite ease-in-out;
+}
+
+.hidden {
+  display: none;
 }
 
 @keyframes moveUpDown {
