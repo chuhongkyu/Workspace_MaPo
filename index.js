@@ -30,13 +30,15 @@ function newGhost(){
     window.open("./ghost.html");
 }
 
-
-/////////////////////////
 function findLocation(){
-    navigator.geolocation? navigator.geolocation.getCurrentPosition(showPosition): LOCATION.innerHTML = "error";
-} // 이것이 삼항 연산자
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        LOCATION.innerHTML = "Geolocation is not supported by this browser.";
+      }
+} 
 
-var container = document.getElementById('map');
+const container = document.getElementById('map');
 
 function showPosition(position) {
     LOCATION.innerHTML = "위도: " + position.coords.latitude +
@@ -45,14 +47,14 @@ function showPosition(position) {
     var lat  = position.coords.latitude;
     var long = position.coords.longitude;
 
-    var mapContainer = document.getElementById('map'), 
+    var container = document.getElementById('map'), 
     mapOption = { 
         center: new kakao.maps.LatLng(lat, long), 
         level: 2 
     };
 
 
-    var map = new kakao.maps.Map(mapContainer, mapOption); 
+    var map = new kakao.maps.Map(container, mapOption); 
     var markerPosition  = new kakao.maps.LatLng(lat, long); 
     var marker = new kakao.maps.Marker({
     position: markerPosition
