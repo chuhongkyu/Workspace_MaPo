@@ -43,8 +43,8 @@ function showPosition(position) {
     LOCATION.innerHTML = "위도: " + position.coords.latitude +
     "<br>경도: " + position.coords.longitude;
 
-    const latitude  = position.coords.latitude;
-    const longitude = position.coords.longitude;
+    var latitude  = position.coords.latitude;
+    var longitude = position.coords.longitude;
 
     var mapContainer = document.getElementById('map'), 
     mapOption = { 
