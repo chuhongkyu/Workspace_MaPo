@@ -40,6 +40,9 @@ function findLocation(){
 
 const container = document.getElementById('map');
 
+var lat = 0;
+var long = 0;
+
 function showPosition(position) {
     LOCATION.innerHTML = "위도: " + position.coords.latitude +
     "<br>경도: " + position.coords.longitude;
