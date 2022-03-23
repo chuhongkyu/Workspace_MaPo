@@ -52,29 +52,7 @@ function showPosition(position) {
         center: new kakao.maps.LatLng(lat, long), 
         level: 2 
     };
-
-
     var map = new kakao.maps.Map(container, mapOption); 
-    var markerPosition  = new kakao.maps.LatLng(lat, long); 
-    var marker = new kakao.maps.Marker({
-    position: markerPosition
-    });
-
-
-    var iwContent = '<div style="padding:5px;">여기가 어디여~!</div>', 
-    iwPosition = new kakao.maps.LatLng(lat + 0.0002, long), 
-    iwRemoveable = true; 
-
-    var infowindow = new kakao.maps.InfoWindow({
-        map: map,
-        position : iwPosition, 
-        content : iwContent,
-        removable : iwRemoveable
-});
-
-    
-
-marker.setMap(map);
 
 }
 
@@ -88,6 +66,26 @@ marker.setMap(map);
 
 
 
+// var markerPosition  = new kakao.maps.LatLng(lat, long); 
+// var marker = new kakao.maps.Marker({
+// position: markerPosition
+// });
+
+
+// var iwContent = '<div style="padding:5px;">여기가 어디여~!</div>', 
+// iwPosition = new kakao.maps.LatLng(lat + 0.0002, long), 
+// iwRemoveable = true; 
+
+// var infowindow = new kakao.maps.InfoWindow({
+//     map: map,
+//     position : iwPosition, 
+//     content : iwContent,
+//     removable : iwRemoveable
+// });
+
+
+
+// marker.setMap(map);
 
 
 
