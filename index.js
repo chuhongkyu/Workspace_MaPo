@@ -14,7 +14,6 @@ function myFunction() {
     }
 }
 
-
 function self(){
     window.location.href = 'https://www.naver.com';
 }
@@ -37,7 +36,7 @@ function findLocation(){
     navigator.geolocation? navigator.geolocation.getCurrentPosition(showPosition): LOCATION.innerHTML = "error";
 } // 이것이 삼항 연산자
 
-const container = document.getElementById('map');
+var container = document.getElementById('map');
 
 function showPosition(position) {
     LOCATION.innerHTML = "위도: " + position.coords.latitude +
@@ -51,11 +50,15 @@ function showPosition(position) {
         center: new kakao.maps.LatLng(lat, long), 
         level: 2 
     };
+
+
     var map = new kakao.maps.Map(mapContainer, mapOption); 
     var markerPosition  = new kakao.maps.LatLng(lat, long); 
     var marker = new kakao.maps.Marker({
     position: markerPosition
     });
+
+
     var iwContent = '<div style="padding:5px;">여기가 어디여~!</div>', 
     iwPosition = new kakao.maps.LatLng(lat + 0.0002, long), 
     iwRemoveable = true; 
