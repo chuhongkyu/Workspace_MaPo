@@ -43,21 +43,21 @@ function showPosition(position) {
     LOCATION.innerHTML = "위도: " + position.coords.latitude +
     "<br>경도: " + position.coords.longitude;
 
-    var latitude  = position.coords.latitude;
-    var longitude = position.coords.longitude;
+    var lat  = position.coords.latitude;
+    var long = position.coords.longitude;
 
     var mapContainer = document.getElementById('map'), 
     mapOption = { 
-        center: new kakao.maps.LatLng(latitude, longitude), 
+        center: new kakao.maps.LatLng(lat, long), 
         level: 2 
     };
     var map = new kakao.maps.Map(mapContainer, mapOption); 
-    var markerPosition  = new kakao.maps.LatLng(latitude, longitude); 
+    var markerPosition  = new kakao.maps.LatLng(lat, long); 
     var marker = new kakao.maps.Marker({
     position: markerPosition
     });
     var iwContent = '<div style="padding:5px;">여기가 어디여~!</div>', 
-    iwPosition = new kakao.maps.LatLng(latitude + 0.0002, longitude), 
+    iwPosition = new kakao.maps.LatLng(lat + 0.0002, long), 
     iwRemoveable = true; 
 
     var infowindow = new kakao.maps.InfoWindow({
