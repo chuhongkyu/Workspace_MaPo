@@ -1,0 +1,53 @@
+.star {
+  width: 10px;
+  height: 10px;
+  opacity: 0;
+  background-image: url(/img/star-solid.png);
+  background-position: center;
+  background-size: cover;
+  animation: fallstar 10s linear infinite;
+}
+
+.star:nth-of-type(2n) {
+  width: 7px;
+  height: 7px;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.star:nth-of-type(2n + 1) {
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.star:nth-of-type(9n) {
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+@keyframes fallstar {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-15px, 20vh);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(15px, 40vh);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-15px, 60vh);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(15px, 80vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100vh);
+  }
+}

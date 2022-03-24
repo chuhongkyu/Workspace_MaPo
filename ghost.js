@@ -1,4 +1,3 @@
-
 const Ghost = document.querySelector(".ghost");
 
 document.body.addEventListener("mousemove", function(e) {
@@ -7,9 +6,7 @@ document.body.addEventListener("mousemove", function(e) {
     Ghost.style.top = e.pageY + 'px';
 });
 
-
 var appear = false;
-
 
 function hiddenGhost(){
     appear = true;
@@ -26,3 +23,21 @@ function appearGhost(){
 
 window.addEventListener("dblclick", hiddenGhost);
 window.addEventListener("click", appearGhost);
+
+
+function createStar() {
+    const star= document.createElement("div");
+    star.classList.add('star');
+    star.style.marginLeft =randomPosition() + 'px';
+    document.body.appendChild(star);
+}
+
+function randomPosition() {
+    return Math.floor(Math.random() * window.innerWidth);
+}
+
+for (let i=0; i<300; i++) {
+    createStar();
+}
+
+

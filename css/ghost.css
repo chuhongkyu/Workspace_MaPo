@@ -1,3 +1,5 @@
+@import url(/css/snow.css);
+
 * {
   padding: 0;
   margin: 0;
@@ -11,11 +13,9 @@ div {
 body {
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  overflow: hidden;
   box-sizing: border-box;
-  background: linear-gradient(to bottom, RGB(218, 92, 15), rgb(199, 74, 2) 10%);
+  background: linear-gradient(to bottom, RGB(218, 92, 15), rgb(126, 47, 2));
 }
 
 .ghost {
