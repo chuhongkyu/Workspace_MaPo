@@ -40,6 +40,8 @@ function findLocation(){
 
 const container = document.getElementById('map');
 
+let LEVEL = 2;
+
 let lat = 0;
 let long = 0;
 
@@ -50,16 +52,14 @@ function showPosition(position) {
     var lat = position.coords.latitude;
     var long = position.coords.longitude;
 
-    var container = document.getElementById('map'),
         mapOption = {
             center: new kakao
                 .maps
                 .LatLng(lat, long),
-            level: 2
+            level: LEVEL
         };
-    var map = new kakao
-        .maps
-        .Map(container, mapOption);
+
+    var map = new kakao.maps.Map(container, mapOption);
 
     var markerPosition = new kakao
         .maps
@@ -81,11 +81,29 @@ function showPosition(position) {
         );
 
     marker.setMap(map);
-    console.log(long);
+    console.log(lat, long);
 
 }
 
-console.log(long, long);
+function upMap(){
+    LEVEL++
+    console.log(LEVEL);
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+function downMap(){
+    LEVEL--
+    if(LEVEL <= 0){
+        LEVEL = 0;
+        alert("더 이상 확대할 수 없어요.")
+    }
+    console.log(LEVEL);
+    navigator.geolocation.getCurrentPosition(showPosition);
+}
+
+
+
+console.log(lat, long);
 
 
 
