@@ -1,7 +1,7 @@
 * {
-  box-sizing: border-box;
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
 }
 
 div {
@@ -14,7 +14,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: RGB(218, 92, 15);
+  box-sizing: border-box;
+  background: linear-gradient(to bottom, RGB(218, 92, 15), rgb(199, 74, 2) 10%);
 }
 
 .ghost {
@@ -59,15 +60,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.eye_white {
-  width: 5px;
-  height: 5px;
-  background-color: white;
-  border-radius: 50%;
-  z-index: 3;
-  position: relative;
+  animation: eyeanim 3s infinite;
 }
 
 .mouth {
@@ -88,6 +81,7 @@ body {
   margin-left: 18px;
   margin-top: 13px;
   z-index: 2;
+  animation: mouse 3s infinite;
 }
 
 .hand_left {
@@ -101,6 +95,7 @@ body {
   transform: rotateZ(35deg);
   z-index: 0;
   box-shadow: rgba(0, 0, 0, 0.54) 0px 5px 0px 0.5px;
+  animation: handL 3s infinite;
 }
 
 .hand_right {
@@ -113,10 +108,13 @@ body {
   border-radius: 25px;
   transform: rotateZ(-35deg);
   box-shadow: rgba(0, 0, 0, 0.54) 0px 5px 0px 0.5px;
+  animation: handR 3s infinite;
 }
 
 .bottom {
   display: flex;
+  position: relative;
+  top: -1px;
 }
 
 .leg {
@@ -125,8 +123,8 @@ body {
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: RGB(249, 236, 220);
-  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 0px 0.2px;
-  z-index: 1;
+  box-shadow: rgba(0, 0, 0, 0.56) 0px 10px 0px 0.1px;
+  z-index: 2;
 }
 
 .leg:first-child {
@@ -153,7 +151,8 @@ body {
 }
 
 .hidden {
-  display: none;
+  opacity: 0.3;
+  transition: 1s;
 }
 
 @keyframes moveUpDown {
@@ -163,6 +162,7 @@ body {
 
   50% {
     margin-top: 50px;
+    transform: scale(1.6);
   }
 
   100% {
@@ -180,5 +180,31 @@ body {
   }
   100% {
     height: 15px;
+  }
+}
+
+@keyframes eyeanim {
+  50% {
+    height: 2px;
+  }
+}
+
+@keyframes mouse {
+  50% {
+    height: 44px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+  }
+}
+
+@keyframes handL {
+  50% {
+    transform: rotateZ(-10deg);
+  }
+}
+
+@keyframes handR {
+  50% {
+    transform: rotateZ(10deg);
   }
 }

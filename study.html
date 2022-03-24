@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            height: 100vh;
+        }
+
+        .background_zip{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .div1>.red{
+            color: red;
+            text-shadow: 2px 2px;
+        }
+        .blue{
+            color: blue;
+        }
+
+        .sqaure{
+            width: 100px;
+            height: 100px;
+            margin-right: 10px;
+            background: conic-gradient(from 90deg, red, yellow, green);
+        }
+        .sqaure:first-child{
+            background: repeating-conic-gradient(red 0deg 10deg, yellow 10deg 20deg, blue 20deg 30deg);
+            border-radius: 50%;
+            box-shadow: 10px 10px lightblue;
+        }
+
+        .sqaure:nth-child(2){
+            background: radial-gradient(black,white);;
+            box-shadow: 10px 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background_zip">
+        <div class="sqaure"></div>
+        <div class="sqaure"></div>
+        <div class="sqaure"></div>
+        <div class="sqaure"></div>
+
+    </div>
+    
+
+    <div class="div1">
+        <p class="red">너는 div1의 레드</p>
+        <p class="red">너는 div1의 레드</p>
+        <p class="red">너는 div1의 레드</p>
+        <div class="div2">
+            <p class="red">너는 div2의 레드</p>
+        </div>
+        
+    </div>
+
+        <p class="red">너는 혼자 레드</p>
+        <p class="blue">너는 혼자 블루</p>
+    
+</body>
+</html>
