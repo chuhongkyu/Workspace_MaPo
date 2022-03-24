@@ -24,29 +24,6 @@ h1 {
   text-shadow: 2px 4px 2px gray;
 }
 
-.URL_NAV {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.URL_NAV a {
-  text-decoration: none;
-  margin-left: 10px;
-}
-
-.URL_NAV a :hover {
-  background-color: black;
-  color: white;
-}
-
-.URL_NAV span {
-  padding: 5px 15px;
-  background-color: white;
-  border-radius: 25px;
-  font-weight: 600;
-}
-
 #myVideo {
   position: fixed;
   right: 0;
