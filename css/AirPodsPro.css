@@ -1,0 +1,184 @@
+* {
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+body {
+  background-color: black;
+  margin: 0;
+}
+
+.header {
+  border-top: 1px solid rgba(255, 255, 255, 0.151);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.151);
+  width: 100%;
+  background-color: rgba(29, 29, 31, 0.72);
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title_h1 {
+  margin-left: 15px;
+}
+
+.nav_btn {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav_btn span {
+  color: white;
+  font-size: 12px;
+  margin: 5px;
+  padding: 5px 10px;
+  border-radius: 25px;
+}
+
+.nav_btn span:hover {
+  background-color: #0071e3;
+}
+
+a {
+  color: royalblue;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.title_h1 {
+  color: white;
+}
+h5 {
+  font-size: 50px;
+  color: white;
+}
+
+.scene-img {
+  max-height: 100vh;
+}
+
+.scroll-graphic {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+.scroll-text {
+  position: relative;
+}
+
+.step {
+  margin-bottom: 60vh;
+  padding: 0.5rem 1rem;
+}
+
+.Logo {
+  font-size: 125px;
+  color: white;
+  white-space: nowrap;
+  text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9,
+    0 5px 0 #aaa, 0 6px 1px rgba(0, 0, 0, 0.1), 0 0 5px rgba(0, 0, 0, 0.1),
+    0 1px 3px rgba(0, 0, 0, 0.3), 0 3px 5px rgba(0, 0, 0, 0.2),
+    0 5px 10px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.2),
+    0 20px 20px rgba(0, 0, 0, 0.15);
+}
+
+.global-width {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.graphic-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  will-change: opacity;
+}
+
+.visible {
+  opacity: 1;
+  transition: 1s;
+}
+
+.bird {
+  position: absolute;
+  left: 0;
+  bottom: 70%;
+  width: 100px;
+  transform: translateX(-100%);
+  transition: 1.5s 0.5s linear;
+}
+
+[data-index="5"] .bird {
+  left: 30%;
+  bottom: 30%;
+}
+
+.global-footer {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.strikethrough {
+  text-decoration: line-through;
+}
+
+.last_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+}
+
+.last_container h1 {
+  font-size: 55px;
+  color: black;
+}
+
+.contents_box {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: black;
+}
+
+.content img {
+  width: 200px;
+  height: 200px;
+}
+
+h6 {
+  color: white;
+  font-size: 24px;
+}
+
+/* dom
+
+getBoundingClientRect()
+Intersection Observer
+
+data-??
+
+will-change */
