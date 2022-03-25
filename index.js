@@ -45,8 +45,8 @@ let LEVEL = 2;
 let lat = 0;
 let long = 0;
 
-const imageSrc = 'img/building-solid.svg';
-const imageSize = new kakao.maps.Size(30, 30); // 마커이미지의 크기입니다
+const imageSrc = 'img/kakao.png';
+const imageSize = new kakao.maps.Size(40, 40); // 마커이미지의 크기입니다
 const imageOption = {offset: new kakao.maps.Point(10, 0)};
 
 function showPosition(position) {
@@ -73,7 +73,7 @@ function showPosition(position) {
     });
 
 //////////////////////////////////////
-    var iwContent = '<div style="padding:5px;">백합아파트</div>',
+    var iwContent = '<div class="info_style" >백합아파트</div>',
         iwPosition = new kakao
             .maps
             .LatLng(lat, long),
@@ -90,6 +90,7 @@ function showPosition(position) {
     infowindow.open(map, marker);
 
 }
+
 
 
 
