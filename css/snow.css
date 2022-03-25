@@ -1,6 +1,6 @@
 .star {
-  width: 10px;
-  height: 10px;
+  width: 20px;
+  height: 20px;
   opacity: 0;
   background-image: url(/img/star-solid.png);
   background-position: center;
@@ -9,8 +9,8 @@
 }
 
 .star:nth-of-type(2n) {
-  width: 7px;
-  height: 7px;
+  width: 13px;
+  height: 13px;
   animation-duration: 7s;
   animation-delay: 1s;
 }
@@ -40,7 +40,7 @@
   }
   60% {
     opacity: 1;
-    transform: translate(-15px, 60vh);
+    transform: translate(-15px, 60vh) rotateZ(360deg);
   }
   80% {
     opacity: 1;

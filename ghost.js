@@ -28,16 +28,17 @@ window.addEventListener("click", appearGhost);
 function createStar() {
     const star= document.createElement("div");
     star.classList.add('star');
-    star.style.marginLeft =randomPosition() + 'px';
+    star.style.marginLeft = randomPosition() + 'vw';
     document.body.appendChild(star);
 }
 
 function randomPosition() {
-    return Math.floor(Math.random() * window.innerWidth);
+    return Math.floor(Math.random() * 100);
+    
+
 }
 
 for (let i=0; i<300; i++) {
     createStar();
 }
-
 

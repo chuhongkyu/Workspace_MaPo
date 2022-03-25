@@ -71,7 +71,7 @@ function showPosition(position) {
     var iwContent = '<div style="padding:5px;">여기가 어디여~!</div>',
         iwPosition = new kakao
             .maps
-            .LatLng(lat + 0.0002, long),
+            .LatLng(lat, long),
         iwRemoveable = true;
 
     var infowindow = new kakao
@@ -82,6 +82,7 @@ function showPosition(position) {
 
     marker.setMap(map);
     console.log(lat, long);
+    infowindow.open(map, marker);
 
 }
 
