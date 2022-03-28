@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .tooltip_box{
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                margin-top: 100px;
+            }
+
+            .tooltip {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip .tooltiptext {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+            }
+
+           
+            .tooltip:hover .tooltiptext {
+                visibility: visible;
+                top: -5px;
+                right: 105%;
+            }
+
+            .tooltip_up{
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip_up .tooltiptext_up {
+                visibility: hidden;
+                width: 120px;
+                background-color: blue;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+            }
+
+            .tooltip_up:hover .tooltiptext_up {
+                visibility: visible;
+                bottom: 100%;
+                left: 50%;
+                margin-left: -60px; 
+            }
+
+            .tooltip_right {
+                position: relative;
+                display: inline-block;
+                border-bottom: 1px dotted black;
+            }
+
+            .tooltip_right .tooltiptext_right {
+                visibility: hidden;
+                width: 120px;
+                background-color: black;
+                color: #fff;
+                text-align: center;
+                padding: 5px 0;
+                border-radius: 6px;
+                position: absolute;
+                z-index: 1;
+                top: -5px;
+                left: 110%;
+            }
+
+            .tooltip_right .tooltiptext_right::after{
+                content: " ";
+                position: absolute;
+                top: 50%;
+                right: 100%;
+                margin-top: -5px;
+                border-width: 5px;
+                border-style: solid;
+                border-color: transparent black transparent transparent;
+            }
+           
+            .tooltip_right:hover .tooltiptext_right {
+                visibility: visible;
+            }
+            
+
+        </style>
+
+    </head>
+    <body>
+        <div class="tooltip_box">
+            <div class="tooltip">left
+                <span class="tooltiptext">Tooltip text</span>
+            </div>
+            <div class="tooltip_up">up
+                <span class="tooltiptext_up">Tooltip text</span>
+            </div>
+            <div class="tooltip_right">right
+                <span class="tooltiptext_right">Tooltip text</span>
+            </div>
+
+        </div>
+        
+
+    </body>
+
+</html>
