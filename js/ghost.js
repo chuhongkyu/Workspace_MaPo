@@ -28,7 +28,7 @@ window.addEventListener("click", appearGhost);
 function createStar() {
     const star= document.createElement("div");
     star.classList.add('star');
-    star.style.marginLeft = randomPosition() + 'vw';
+    star.style.marginLeft = randomPosition() + '%';
     document.body.appendChild(star);
 }
 
@@ -38,7 +38,7 @@ function randomPosition() {
 
 }
 
-for (let i=0; i<300; i++) {
+for (let i=0; i<500; i++) {
     createStar();
 }
 
