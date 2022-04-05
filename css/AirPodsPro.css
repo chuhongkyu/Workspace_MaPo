@@ -206,3 +206,17 @@ will-change */
     transform: rotateZ(360deg);
   }
 }
+
+.fade-in img{
+  animation: fadein 5s ;
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
