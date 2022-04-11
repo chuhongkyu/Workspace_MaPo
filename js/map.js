@@ -1,11 +1,12 @@
 const LOCATION = document.getElementById("location_text");
 
 function findLocation(){
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(showPosition);
-      } else {
-        LOCATION.innerHTML = "Geolocation is not supported by this browser.";
-      }
+    // if (navigator.geolocation) {
+    //     navigator.geolocation.getCurrentPosition(showPosition);
+    //   } else {
+    //     LOCATION.innerHTML = "Geolocation is not supported by this browser.";
+    //   }
+    navigator.geolocation? navigator.geolocation.getCurrentPosition(showPosition):LOCATION.innerHTML = "Geolocation is not supported by this browser.";
 } 
 
 const container = document.getElementById('map');
