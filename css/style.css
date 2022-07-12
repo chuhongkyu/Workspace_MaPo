@@ -1,95 +1,96 @@
-* {
-  box-sizing: border-box;
-}
+@import url(/css/ghost.css);
 
-body {
-  background-color: brown;
-  width: 100%;
+*,
+body,
+#root {
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
 }
 
-header {
+body {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+#header {
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  box-shadow: 0px -21px 78px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #808c97;
+  padding: 5px 20px;
+}
+
+#main {
+  background-color: #f5f4f2;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.nav_1 {
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 144.7%;
 }
-
-header i {
-  margin-right: 15px;
-}
-
-h1 {
-  color: white;
-  font-size: 50px;
-  text-shadow: 2px 4px 2px gray;
-}
-
-#myVideo {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-.content {
-  position: fixed;
-  top: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.5);
-  color: #f1f1f1;
-  width: 20%;
+.nav_2 {
   height: 100%;
-  padding: 5px;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 144.7%;
+}
+.nav_3 {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Courier New", Courier, monospace;
 }
 
-.content i {
+.nav_btn {
   margin-right: 10px;
 }
 
-.list {
-  margin-left: 10px;
-  display: flex;
-  flex-direction: column;
-  text-align: start;
-}
-
-#myBtn {
-}
-
-.BtnStyle {
-  width: 200px;
-  height: 50px;
-  font-size: 18px;
-  border: none;
-  background: rgb(252, 249, 249);
-  color: rgb(14, 13, 13);
-  cursor: pointer;
-  font-weight: 600;
-  border-radius: 25px;
-  align-items: center;
+#footer button {
+  width: 100px;
+  background-color: #808c97;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
-  margin-bottom: 6px;
-}
-
-.BtnStyle:hover {
-  background: rgb(5, 5, 5);
-  color: rgb(248, 245, 245);
-}
-
-.center {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
   align-items: center;
+  color: white;
+  margin-right: 5px;
 }
 
-@media screen and (max-width: 768px) {
-  .content {
-    width: 100%;
-    height: 100%;
-  }
+.disabled {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+#footer {
+  display: flex;
+  float: left;
+  width: 100%;
+  height: 100px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  z-index: 99;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
 }

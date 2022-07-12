@@ -1,26 +1,4 @@
-@import url(/css/snow.css);
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-div {
-  display: block;
-}
-
-body {
-  width: 100%;
-  min-height: 100vh;
-  overflow: hidden;
-  box-sizing: border-box;
-  background: linear-gradient(to bottom, RGB(218, 92, 15), rgb(126, 47, 2));
-}
-
 .ghost {
-  /* width: 144px;
-    height: 175px; */
   position: absolute;
   animation: moveUpDown 3s infinite;
 }
@@ -206,5 +184,59 @@ body {
 @keyframes handR {
   50% {
     transform: rotateZ(10deg);
+  }
+}
+
+.star {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  background-image: url(/img/star-solid.png);
+  background-position: center;
+  background-size: cover;
+  animation: fallstar 10s linear infinite;
+}
+
+.star:nth-of-type(2n) {
+  width: 13px;
+  height: 13px;
+  animation-duration: 7s;
+  animation-delay: 1s;
+}
+
+.star:nth-of-type(2n + 1) {
+  animation-duration: 8s;
+  animation-delay: 2s;
+}
+
+.star:nth-of-type(9n) {
+  animation-duration: 9s;
+  animation-delay: 3s;
+}
+
+@keyframes fallstar {
+  0% {
+    opacity: 0;
+    transform: translateY(0);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(-15px, 20vh);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(15px, 40vh);
+  }
+  60% {
+    opacity: 1;
+    transform: translate(-15px, 60vh) rotateZ(360deg);
+  }
+  80% {
+    opacity: 1;
+    transform: translate(15px, 80vh);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(100vh);
   }
 }

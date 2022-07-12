@@ -1,7 +1,6 @@
 const Ghost = document.querySelector(".ghost");
 
 document.body.addEventListener("mousemove", function (e) {
-  // console.log(e);
   Ghost.style.left = e.pageX + "px";
   Ghost.style.top = e.pageY + "px";
 });
