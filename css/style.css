@@ -1,4 +1,5 @@
 @import url(/css/ghost.css);
+@import url(/css/3D.css);
 
 *,
 body,
@@ -10,6 +11,7 @@ body,
 
 body {
   overflow: hidden;
+  background-color: #f5f4f2;
 }
 
 a {
@@ -30,7 +32,6 @@ a {
 }
 
 #main {
-  background-color: #f5f4f2;
   height: 100%;
   transition: 0.5s;
 }
@@ -67,21 +68,6 @@ a {
   margin-right: 10px;
 }
 
-#footer button {
-  width: 100px;
-  background-color: #808c97;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  margin-right: 5px;
-}
-
-.disabled {
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-}
-
 #footer {
   display: flex;
   float: left;
@@ -93,4 +79,26 @@ a {
   z-index: 99;
   box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
     rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+  padding: 10px;
+}
+
+#footer button {
+  width: 100px;
+  background-color: #808c97;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin-right: 5px;
+  border: none;
+  white-space: nowrap;
+  font-size: 20px;
+  font-weight: bold;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+#footer button:hover {
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
 }

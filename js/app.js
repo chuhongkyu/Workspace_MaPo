@@ -6,8 +6,8 @@ const Header = document.getElementById("header");
 const Main = document.getElementById("main");
 const Footer = document.getElementById("footer");
 
-const headText = ["연습", "JavaScript", ""];
-const navText = ["Ghost", "Home", "You"];
+const headText = ["", "JavaScript", ""];
+const navText = ["study", "Home", "You"];
 
 //header
 const makeHeader = () => {
@@ -18,6 +18,25 @@ const makeHeader = () => {
 
 makeHeader();
 
+//first
+const Nav1 = document.querySelector(".nav_1");
+const addCommit = () => {
+  let count = 0;
+  function NumberUP() {
+    let counting = setInterval(function () {
+      if (count == 1299) {
+        clearInterval(counting);
+        return false;
+      }
+      count += 1;
+      Nav1.innerHTML = new Intl.NumberFormat().format(count);
+    }, 5);
+  }
+  NumberUP();
+};
+
+addCommit();
+
 const Nav3 = document.querySelector(".nav_3");
 const MakeNav = () => {
   for (let i = 0; i < 3; i++) {
@@ -26,11 +45,11 @@ const MakeNav = () => {
 };
 
 MakeNav();
-
 //main
 
 //start Ghost
 const setGhost = () => {
+  Main.innerHTML = null;
   Main.innerHTML = `
     <div class="ghost"><div class="ghost_body">
             <div class="face">
@@ -91,8 +110,31 @@ const setGhost = () => {
   for (let i = 0; i < 500; i++) {
     createStar();
   }
-  Btn1.disabled = true;
-  Btn1.classList("disabled");
+};
+
+//3d 박스
+const set3dBox = () => {
+  Main.innerHTML = null;
+  Main.innerHTML = `
+    <div class="container">
+        <div class="flip-btn">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="back2"></div>
+            <div class="back3"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+        </div>
+        <div id="small-ball"></div>
+    </div>
+    `;
+  Main.style.backgroundColor = "black";
+  const viewBtn = document.getElementById("small-ball");
+  const Container = document.querySelector(".container");
+  function changeView() {
+    Container.classList.toggle("viewPort");
+  }
+  viewBtn.addEventListener("click", changeView);
 };
 
 //footer
@@ -102,3 +144,4 @@ Btn1.addEventListener("click", setGhost);
 
 const Btn2 = document.querySelector(".btn_2");
 Btn2.innerHTML = "3DBox";
+Btn2.addEventListener("click", set3dBox);
