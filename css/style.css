@@ -1,5 +1,5 @@
-@import url(/css/ghost.css);
-@import url(/css/3D.css);
+@import url(./3D.css);
+@import url(./ghost.css);
 
 *,
 body,
