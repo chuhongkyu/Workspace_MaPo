@@ -17,7 +17,6 @@
   text-align: center;
   line-height: 200px;
   transform-style: preserve-3d;
-  cursor: pointer;
   animation: rotateEveryOne 3s 1s ease-in-out infinite;
   transition: 1s;
   color: white;
@@ -114,4 +113,6 @@
   color: white;
   border-radius: 25px;
   margin: 10px;
+  cursor: pointer;
+  z-index: 99;
 }
